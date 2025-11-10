@@ -7,6 +7,7 @@ pygame.init()
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
 FPS = 120 # 120 for fulidity
+GREY = (29, 29, 29)
 
 # Setup game window
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -29,6 +30,7 @@ while True:
     # 2. Update State
     
     # 3. Drawing
+    window.fill(GREY)
     
     pygame.display.flip()
     clock.tick(FPS)
