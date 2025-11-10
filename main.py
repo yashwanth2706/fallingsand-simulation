@@ -38,6 +38,7 @@ while True:
         simulation.add_particle(row, column)
         
     # 2. Update State
+    simulation.update()
     
     # 3. Drawing
     window.fill(GREY)
