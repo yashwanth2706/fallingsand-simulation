@@ -1,5 +1,6 @@
 # Falling Sand Simulation
 Falling sand simulation made with python using pygame
+![Project Demo](https://raw.githubusercontent.com/yashwanth2706/fallingsand-simulation/main/demo/FallingSandSimulationDemo.gif)
 ## Requirements & Setup
 
 ### Prerequisites
