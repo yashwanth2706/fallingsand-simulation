@@ -1,6 +1,5 @@
 import pygame, sys
-from grid import Grid
-from particle import SandParticle 
+from simulation import Simulation
 
 # Initialize pygame
 pygame.init()
@@ -19,8 +18,9 @@ pygame.display.set_caption("Falling Sand")
 
 # clock object to control the framerate of the simulation
 clock = pygame.time.Clock()
-grid = Grid(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
-grid.cells[0][0] = SandParticle()
+simulation = Simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
+simulation.add_particle(0, 0)
+simulation.add_particle(0, 1)
 
 # Simulation Loop
 while True:
@@ -36,7 +36,7 @@ while True:
     
     # 3. Drawing
     window.fill(GREY)
-    grid.draw(window)
+    simulation.draw(window)
     
     pygame.display.flip()
     clock.tick(FPS)

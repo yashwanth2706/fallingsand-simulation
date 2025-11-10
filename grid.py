@@ -16,5 +16,9 @@ class Grid:
                 if particle is not None:
                     color = particle.color
                 # pygame.draw.rect(surface, color, shape(rect))
-                pygame.draw.rect(window, color, (column * self.cell_size, row * self.cell_size, self.cell_size -1, self.cell_size-1))
+                pygame.draw.rect(window, color, 
+                                (column * self.cell_size, row * self.cell_size, self.cell_size -1, self.cell_size-1))
                 
+    def add_particle(self, row, column, particle_type):
+        if 0 <= row < self.rows and 0 <= column < self.columns:
+            self.cells[row][column] = particle_type()
