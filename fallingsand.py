@@ -3,14 +3,15 @@ import pygame, sys
 # Initialize pygame
 pygame.init()
 
-# Setup height and width
+# Setup height, width, FPS
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
+FPS = 120 # 120 for fulidity
 
 # Setup game window
-window = pygame.display.set_mode((WINDOW_HEIGHT, WINDOW_WIDTH))
+window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 # Add name (caption) to window
-pygame.display.set_caption("Failling Sand")
+pygame.display.set_caption("Falling Sand")
 
 # clock object to control the framerate of the simulation
 clock = pygame.time.Clock()
@@ -28,3 +29,6 @@ while True:
     # 2. Update State
     
     # 3. Drawing
+    
+    pygame.display.flip()
+    clock.tick(FPS)
