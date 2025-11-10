@@ -11,4 +11,5 @@ class Simulation:
     def add_particle(self, row, column):
         self.grid.add_particle(row, column, SandParticle)
         
-    
+    def remove_particle(self, row, column):
+        self.grid.remove_particle(row, column)

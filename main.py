@@ -19,8 +19,6 @@ pygame.display.set_caption("Falling Sand")
 # clock object to control the framerate of the simulation
 clock = pygame.time.Clock()
 simulation = Simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
-simulation.add_particle(0, 0)
-simulation.add_particle(0, 1)
 
 # Simulation Loop
 while True:
@@ -32,6 +30,13 @@ while True:
             pygame.quit()
             sys.exit()
     
+    buttons = pygame.mouse.get_pressed()
+    if buttons[0]:
+        pos = pygame.mouse.get_pos()
+        row = pos[1] // CELL_SIZE
+        column = pos[0] // CELL_SIZE
+        simulation.add_particle(row, column)
+        
     # 2. Update State
     
     # 3. Drawing
