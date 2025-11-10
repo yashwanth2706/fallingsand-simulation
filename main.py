@@ -7,7 +7,7 @@ pygame.init()
 # Setup height, width, FPS
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
-CELL_SIZE = 20 # Total Cells = (800/20) * (600/20) = 1200
+CELL_SIZE = 6 # Total Cells = (800/20) * (600/20) = 1200
 FPS = 120 # 120 for fulidity
 GREY = (29, 29, 29)
 
