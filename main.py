@@ -24,18 +24,7 @@ simulation = Simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE)
 while True:
     
     # 1. Event Handling
-    # pygame.event.get() returns the list of all the events recognized by pygame
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-    
-    buttons = pygame.mouse.get_pressed()
-    if buttons[0]:
-        pos = pygame.mouse.get_pos()
-        row = pos[1] // CELL_SIZE
-        column = pos[0] // CELL_SIZE
-        simulation.add_particle(row, column)
+    simulation.handel_controls()
         
     # 2. Update State
     simulation.update()
